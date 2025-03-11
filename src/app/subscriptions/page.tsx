@@ -156,7 +156,7 @@ export default function SubscriptionsPage() {
                                 onChange={(e) => setFormData({...formData, sodemeBirimi: e.target.value})}
                                 required
                             >
-                                <option value="TL">TRY</option>
+                                <option value="TRY">TRY</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
                             </select>
@@ -216,7 +216,7 @@ export default function SubscriptionsPage() {
                             </div>
                         </div>
                         <div className="text-lg font-bold mb-2">
-                            {subscription.sodemeMiktari} {subscription.sodemeBirimi || 'TL'}
+                            {subscription.sodemeMiktari} {subscription.sodemeBirimi || 'TRY'}
                             <span className="text-sm font-normal text-gray-500 ml-2">
                                 / {(subscription.sfrequency || 'AYLIK').toLowerCase()}
                             </span>
@@ -278,7 +278,7 @@ export default function SubscriptionsPage() {
                                         })}
                                         required
                                     >
-                                        <option value="TL">TRY</option>
+                                        <option value="TRY">TRY</option>
                                         <option value="USD">USD</option>
                                         <option value="EUR">EUR</option>
                                     </select>
