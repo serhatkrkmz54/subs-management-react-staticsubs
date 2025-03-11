@@ -34,7 +34,7 @@ export default function SubscriptionsPage() {
 
     const fetchSubscriptions = async () => {
         try {
-            const response = await fetch('http://localhost:88/web/static-subscriptions', {
+            const response = await fetch('https://subsmanagementapi.com/web/static-subscriptions', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -63,7 +63,7 @@ export default function SubscriptionsPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:88/web/static-subscriptions', {
+            const response = await fetch('https://subsmanagementapi.com/web/static-subscriptions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export default function SubscriptionsPage() {
 
     const handleDelete = async (id: number) => {
         try {
-            const response = await fetch(`http://localhost:88/web/static-subscriptions/${id}`, {
+            const response = await fetch(`https://subsmanagementapi.com/web/static-subscriptions/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -104,7 +104,7 @@ export default function SubscriptionsPage() {
         if (!editingSubscription?.id) return;
 
         try {
-            const response = await fetch(`http://localhost:88/web/static-subscriptions/${editingSubscription.id}`, {
+            const response = await fetch(`https://subsmanagementapi.com/web/static-subscriptions/${editingSubscription.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ export default function SubscriptionsPage() {
                                 onChange={(e) => setFormData({...formData, sodemeBirimi: e.target.value})}
                                 required
                             >
-                                <option value="TL">TL</option>
+                                <option value="TL">TRY</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
                             </select>
@@ -278,7 +278,7 @@ export default function SubscriptionsPage() {
                                         })}
                                         required
                                     >
-                                        <option value="TL">TL</option>
+                                        <option value="TL">TRY</option>
                                         <option value="USD">USD</option>
                                         <option value="EUR">EUR</option>
                                     </select>

@@ -19,7 +19,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const login = async (credentials: LoginCredentials) => {
         try {
-            const response = await fetch('http://localhost:88/auth/authenticate', {
+            const response = await fetch('https://subsmanagementapi.com/auth/authenticate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
