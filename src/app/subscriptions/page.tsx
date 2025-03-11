@@ -18,7 +18,7 @@ export default function SubscriptionsPage() {
     const [formData, setFormData] = useState<StaticSubscription>({
         sabonelikAdi: '',
         sodemeMiktari: 0,
-        sodemeBirimi: 'TL',
+        sodemeBirimi: 'TRY',
         sfrequency: 'AYLIK',
         slogoUrl: '',
         skategori: ''
@@ -53,7 +53,7 @@ export default function SubscriptionsPage() {
         setFormData({
             sabonelikAdi: '',
             sodemeMiktari: 0,
-            sodemeBirimi: 'TL',
+            sodemeBirimi: 'TRY',
             sfrequency: 'AYLIK',
             slogoUrl: '',
             skategori: 'GENEL'
